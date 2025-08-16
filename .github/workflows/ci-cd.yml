@@ -24,6 +24,7 @@ jobs:
   build-and-push:
     needs: test
     runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - uses: actions/checkout@v4
       
